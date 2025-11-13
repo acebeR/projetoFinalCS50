@@ -1,0 +1,20 @@
+services:
+  backend:
+    build: ./back-end
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./back-end:/app
+    # Se não houver mais dependência de banco, pode remover
+    # depends_on:
+    #   - db
+    environment:
+      # Remova variáveis de banco se não vai usar
+      # - DB_HOST=db
+      # - DB_PORT=3306
+      # - DB_USER=root
+      # - DB_PASSWORD=senha123
+      # - DB_NAME=projeto_cs50
+
+# volumes:
+#   db_data:  # removido
